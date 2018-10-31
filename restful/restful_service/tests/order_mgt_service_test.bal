@@ -6,7 +6,6 @@ endpoint http:Client clientEP {
 };
 
 @test:Config
-// Function to test POST resource 'addOrder'.
 function testResourceAddOrder() {
     http:Request req = new;
 
@@ -45,20 +44,4 @@ function testResourceUpdateOrder() {
     test:assertEquals(resPayload.toString(),
         "{\"Order\":{\"ID\":\"100500\", \"Name\":\"XYZ\", \"Description\":\"Updated order.\"}}",
         msg = "Response mismatch!");
-}
-
-@test:Config {
-    dependsOn: ["testResourceUpdateOrder"]
-}
-// Function to test GET resource 'findOrder'.
-function testResourceFindOrder() {
-
-}
-
-@test:Config {
-    dependsOn: ["testResourceFindOrder"]
-}
-// Function to test DELETE resource 'cancelOrder'.
-function testResourceCancelOrder() {
-
 }
