@@ -1,0 +1,26 @@
+openapi: 3.0.1
+info:
+  title: hello
+  version: 1.0.0
+servers:
+- url: http://localhost:9090/
+paths:
+  /hi:
+    get:
+      operationId: hello
+      responses:
+        200:
+          description: Successful
+          content:
+            application/json:
+              example: Ok
+  /bye:
+    get:
+      operationId: bye
+      responses:
+        200:
+          description: Successful
+          content:
+            application/json:
+              example: Ok
+components: {}
