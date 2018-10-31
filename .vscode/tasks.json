@@ -1,0 +1,16 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+"tasks": [
+    {
+        "label": "ballerina",
+        "type": "shell",
+        "command": "ballerina run hello_service.bal",
+        "group": {
+            "kind": "build",
+            "isDefault": true
+        }
+    }
+]
+}
